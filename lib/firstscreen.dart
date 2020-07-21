@@ -28,7 +28,7 @@ class _State extends State<LoginPage> {
                     controller: nameController,
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
-                      labelText: 'User Name',
+                      labelText: 'Enrollment Number',
                     ),
                   ),
                 ),
@@ -38,11 +38,11 @@ class _State extends State<LoginPage> {
                     value: _value,
                       items: [
                         DropdownMenuItem(
-                          child: Text("First Item"),
+                          child: Text("First Sem"),
                           value: 1,
                         ),
                         DropdownMenuItem(
-                          child: Text("Second Item"),
+                          child: Text("Third Sem"),
                           value: 2,
                         ),
                             ],
