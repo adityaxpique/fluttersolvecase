@@ -1,13 +1,7 @@
-import 'dart:io';
-
 import 'package:device_info/device_info.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:solvecaseflutter/Screens/MainScreen.dart';
-
-import 'firstscreen.dart';
-import 'firstscreen.dart';
-import 'firstscreen.dart';
 import 'firstscreen.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -41,46 +35,58 @@ class _SplashScreenState extends State<SplashScreen> {
 
   String enroll = '';
   int sem;
+  bool isStored;
 
   getDatabaseRef() async {
     DatabaseReference userref = FirebaseDatabase.instance
         .reference()
         .child('Users')
         .child('u$deviceId');
-    print('u$deviceId');
+    print('Unique Id is u$deviceId');
     await userref.once().then((DataSnapshot snap) async {
-      enroll = await snap.value['enroll'];
-      sem = await snap.value['sem'];
-      print(enroll);
-      print(sem);
-      setState(() {
-        print(enroll);
-        print(sem);
-      });
+      print('Snap value is ${snap.value}');
+      if (snap.value == null) {
+        isStored = false;
+        print('Is stored? $isStored');
+      } else {
+        isStored = true;
+        enroll = await snap.value['enroll'];
+        sem = await snap.value['sem'];
+        print('Enrollment is $enroll');
+        setState(() {
+          print(enroll);
+          print(sem);
+          print('Is it stored? $isStored');
+        });
+      }
     });
+
+    if (!isStored) {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(
+          builder: (context) => LoginPage(
+            uid: deviceId,
+          ),
+        ),
+      );
+    } else {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(
+          builder: (context) => MainScreen(
+            enroll: enroll,
+            sem: sem,
+          ),
+        ),
+      );
+    }
   }
 
   @override
   void initState() {
     new Future.delayed(Duration(seconds: 3), () async {
       setId();
-      if (enroll == null) {
-        Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(
-            builder: (context) => LoginPage(
-              uid: deviceId,
-            ),
-          ),
-        );
-      } else {
-        Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(
-            builder: (context) => MainScreen(),
-          ),
-        );
-      }
     });
   }
 
