@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
 class LectureScreen extends StatefulWidget {
+  String enroll;
+  int sem;
+
+  LectureScreen({this.enroll, this.sem});
   @override
   _LectureScreenState createState() => _LectureScreenState();
 }

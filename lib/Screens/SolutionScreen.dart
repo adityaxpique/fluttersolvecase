@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
 class SolutionScreen extends StatefulWidget {
+  String enroll;
+  int sem;
+
+  SolutionScreen({this.enroll, this.sem});
   @override
   _SolutionScreenState createState() => _SolutionScreenState();
 }

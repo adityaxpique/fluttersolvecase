@@ -40,6 +40,7 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   String enroll = '';
+  int sem;
 
   getDatabaseRef() async {
     DatabaseReference userref = FirebaseDatabase.instance
@@ -49,8 +50,12 @@ class _SplashScreenState extends State<SplashScreen> {
     print('u$deviceId');
     await userref.once().then((DataSnapshot snap) async {
       enroll = await snap.value['enroll'];
+      sem = await snap.value['sem'];
+      print(enroll);
+      print(sem);
       setState(() {
         print(enroll);
+        print(sem);
       });
     });
   }

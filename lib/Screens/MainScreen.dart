@@ -8,6 +8,11 @@ import 'MaterialScreen.dart';
 import 'SolutionScreen.dart';
 
 class MainScreen extends StatefulWidget {
+  String enroll;
+  int sem;
+
+  MainScreen({this.enroll, this.sem});
+
   @override
   _MainScreenState createState() => _MainScreenState();
 }
@@ -18,9 +23,18 @@ class _MainScreenState extends State<MainScreen> {
 
   List<Widget> _buildScreens() {
     return [
-      MaterialScreen(),
-      SolutionScreen(),
-      LectureScreen(),
+      MaterialScreen(
+        enroll: widget.enroll,
+        sem: widget.sem,
+      ),
+      SolutionScreen(
+        enroll: widget.enroll,
+        sem: widget.sem,
+      ),
+      LectureScreen(
+        enroll: widget.enroll,
+        sem: widget.sem,
+      ),
     ];
   }
 
