@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
 class MaterialScreen extends StatefulWidget {
+  String enroll;
+  int sem;
+
+  MaterialScreen({this.enroll, this.sem});
   @override
   _MaterialScreenState createState() => _MaterialScreenState();
 }
