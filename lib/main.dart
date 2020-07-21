@@ -1,6 +1,4 @@
 import "package:flutter/material.dart";
-import 'file:///D:/Flutter%20Projects/fluttersolvecase/lib/Screens/firstscreen.dart';
-
 import 'Screens/SplashScreen.dart';
 
 void main() => runApp(MyApp());
