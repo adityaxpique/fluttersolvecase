@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "653065865898",
+    "firebase_url": "https://solvecaseflutter.firebaseio.com",
+    "project_id": "solvecaseflutter",
+    "storage_bucket": "solvecaseflutter.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:653065865898:android:66a240b7dabd7db56e1ed3",
+        "android_client_info": {
+          "package_name": "com.axactstudios.solvecaseflutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "653065865898-oq43ru29367sr4ibae1bi141a9k0kf3u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.axactstudios.solvecaseflutter",
+            "certificate_hash": "f039ba87bc2d5fb36b1c8a0a98e030ba8abf5c87"
+          }
+        },
+        {
+          "client_id": "653065865898-bgjbu7rj00h246jd09mb3j5osgqrbudf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCisdJ5A36y0XNucBZj5lE3_G1MMj4kDx4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "653065865898-bgjbu7rj00h246jd09mb3j5osgqrbudf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
