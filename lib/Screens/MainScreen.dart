@@ -5,6 +5,7 @@ import 'package:solvecaseflutter/Classes/Constants.dart';
 
 import 'LectureScreen.dart';
 import 'MaterialScreen.dart';
+import 'More.dart';
 import 'SolutionScreen.dart';
 
 class MainScreen extends StatefulWidget {
@@ -35,26 +36,33 @@ class _MainScreenState extends State<MainScreen> {
         enroll: widget.enroll,
         sem: widget.sem,
       ),
+      More()
     ];
   }
 
   List<PersistentBottomNavBarItem> _navBarsItems() {
     return [
       PersistentBottomNavBarItem(
-        icon: Icon(CupertinoIcons.book_solid),
+        icon: Icon(CupertinoIcons.home),
         title: ("Study Material"),
         activeColor: kPrimaryColor,
         inactiveColor: kSecondaryColor,
       ),
       PersistentBottomNavBarItem(
-        icon: Icon(CupertinoIcons.folder_solid),
+        icon: Icon(CupertinoIcons.book),
         title: ("Solutions"),
         activeColor: kPrimaryColor,
         inactiveColor: kSecondaryColor,
       ),
       PersistentBottomNavBarItem(
-        icon: Icon(CupertinoIcons.video_camera_solid),
+        icon: Icon(CupertinoIcons.play_arrow),
         title: ("Video Lectures"),
+        activeColor: kPrimaryColor,
+        inactiveColor: kSecondaryColor,
+      ),
+      PersistentBottomNavBarItem(
+        icon: Icon(CupertinoIcons.forward),
+        title: ("More"),
         activeColor: kPrimaryColor,
         inactiveColor: kSecondaryColor,
       ),
@@ -92,7 +100,7 @@ class _MainScreenState extends State<MainScreen> {
         duration: Duration(milliseconds: 200),
       ),
       navBarStyle:
-          NavBarStyle.style3, // Choose the nav bar style with this property.
+          NavBarStyle.style5, // Choose the nav bar style with this property.
     );
   }
 }
