@@ -1,6 +1,7 @@
 import 'package:device_info/device_info.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
+import 'package:solvecaseflutter/Screens/Intro1.dart';
 import 'package:solvecaseflutter/Screens/MainScreen.dart';
 import 'firstscreen.dart';
 
@@ -84,16 +85,21 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   @override
+  // ignore: must_call_super
   void initState() {
     new Future.delayed(Duration(seconds: 3), () async {
-      setId();
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(
+          builder: (context) => Intro1(),
+        ),
+      );
     });
   }
 
   @override
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
-    final width = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: Colors.white,
       body: Center(
