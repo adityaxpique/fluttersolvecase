@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class SolutionScreen extends StatefulWidget {
   String enroll;
   int sem;

@@ -2,12 +2,8 @@ import 'package:fancy_drawer/fancy_drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:solvecaseflutter/Screens/Bookmarks.dart';
 import 'package:solvecaseflutter/Screens/History.dart';
-import 'package:solvecaseflutter/Screens/Home.dart';
 import 'package:solvecaseflutter/Screens/Invite.dart';
-import 'package:solvecaseflutter/Screens/LectureScreen.dart';
 import 'package:solvecaseflutter/Screens/MainScreen.dart';
-import 'package:solvecaseflutter/Screens/MaterialScreen.dart';
-import 'package:solvecaseflutter/Screens/SolutionScreen.dart';
 
 class DrawerScreen extends StatefulWidget {
   @override

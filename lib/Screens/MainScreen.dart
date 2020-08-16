@@ -8,6 +8,7 @@ import 'MaterialScreen.dart';
 import 'More.dart';
 import 'SolutionScreen.dart';
 
+// ignore: must_be_immutable
 class MainScreen extends StatefulWidget {
   String enroll;
   int sem;
