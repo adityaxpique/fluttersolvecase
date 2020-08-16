@@ -1,23 +1,19 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class MaterialScreen extends StatefulWidget {
-  String enroll;
-  int sem;
-
-  MaterialScreen({this.enroll, this.sem});
+class More extends StatefulWidget {
   @override
-  _MaterialScreenState createState() => _MaterialScreenState();
+  _MoreState createState() => _MoreState();
 }
 
-class _MaterialScreenState extends State<MaterialScreen> {
+class _MoreState extends State<More> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: CupertinoColors.white,
       body: Center(
         child: Text(
-          'Study Material',
+          'More',
           style: TextStyle(
               fontFamily: 'Baskervville',
               fontSize: 20,
